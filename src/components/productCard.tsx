@@ -1,4 +1,5 @@
 import Image from "./image";
+import Button from "./UI/Button";
 function ProductCard() {
   return (
     <div className="border  p-2 rounded-md flex flex-col">
@@ -30,12 +31,17 @@ function ProductCard() {
       </div>
 
       <div className="flex items-center space-x-2 ">
-        <button className="bg-indigo-800 text-white rounded-md w-full p-1.5">
+        <Button
+          className="bg-indigo-800  "
+          onClick={() => {
+            console.log("clicked");
+          }}
+        >
           Edit
-        </button>
-        <button className="bg-red-800 text-white rounded-md w-full p-1.5">
-          Delete
-        </button>
+        </Button>
+        <Button className="bg-red-800 ">Delete</Button>
+        <Button className="bg-green-800 ">Sucsess</Button>
+        <Button className="bg-gray-300 ">Cancel</Button>
       </div>
     </div>
   );
