@@ -2,10 +2,6 @@ import Image from "./image";
 function ProductCard() {
   return (
     <div className="border  p-2 rounded-md flex flex-col">
-      <img
-        src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="product image"
-      />
       <Image
         src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="product image"
@@ -23,13 +19,23 @@ function ProductCard() {
         <span className="inline-block w-5 h-5 bg-red-700 rounded-full" />
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center my-3">
         <span>$500.000</span>
-        <img
+
+        <Image
           src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
-          className="w-10 h-10 rounded-full"
+          className="w-10 h-10 rounded-full object-cover"
         />
+      </div>
+
+      <div className="flex items-center space-x-2 ">
+        <button className="bg-indigo-800 text-white rounded-md w-full p-1.5">
+          Edit
+        </button>
+        <button className="bg-red-800 text-white rounded-md w-full p-1.5">
+          Delete
+        </button>
       </div>
     </div>
   );
